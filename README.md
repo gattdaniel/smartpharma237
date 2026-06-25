@@ -63,7 +63,7 @@ npm run dev
 
 # 5. Ouvrir dans le navigateur
 
-# http://localhost:5173
+# https://smartpharma237.netlify.app
 
 🔥 Configuration Firebase
 
