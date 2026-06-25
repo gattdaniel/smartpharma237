@@ -2,28 +2,21 @@ SmartPharma 237 💊
 
 Application web de gestion de pharmacie pour la gestion des médicaments, stocks et ventes en temps réel.
 
-Afficher l'image
-Afficher l'image
-Afficher l'image
-Afficher l'image
+### Page Médicaments
 
-📱 Aperçu de l'application
+![Médicaments](https://raw.githubusercontent.com/gattdaniel/smartpharma237/main/screenshots/medicaments.png)
 
-Page Médicaments
+### Page Alertes
 
-Afficher l'image
+![Alertes](https://raw.githubusercontent.com/gattdaniel/smartpharma237/main/screenshots/alertes.png)
 
-Page Alertes
+### Page Ventes
 
-Afficher l'image
+![Ventes](https://raw.githubusercontent.com/gattdaniel/smartpharma237/main/screenshots/ventes.png)
 
-Page Ventes
+### Page Inventaire
 
-Afficher l'image
-
-Page Inventaire
-
-Afficher l'image
+![Inventaire](https://raw.githubusercontent.com/gattdaniel/smartpharma237/main/screenshots/inventaire.png)
 
 ✨ Fonctionnalités
 
