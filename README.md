@@ -1,16 +1,139 @@
-# React + Vite
+SmartPharma 237 💊
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Application web de gestion de pharmacie pour la gestion des médicaments, stocks et ventes en temps réel.
 
-Currently, two official plugins are available:
+Afficher l'image
+Afficher l'image
+Afficher l'image
+Afficher l'image
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+📱 Aperçu de l'application
 
-## React Compiler
+Page Médicaments
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Afficher l'image
 
-## Expanding the ESLint configuration
+Page Alertes
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Afficher l'image
+
+Page Ventes
+
+Afficher l'image
+
+Page Inventaire
+
+Afficher l'image
+
+✨ Fonctionnalités
+
+💊 Enregistrement des médicaments (nom, dosage, catégorie, prix, quantité, date d'expiration)
+🚨 Alertes automatiques — rupture de stock (quantité < 5 unités)
+📅 Alertes automatiques — expiration dans moins de 30 jours
+🛒 Enregistrement des ventes avec mise à jour automatique du stock
+🔒 Protection contre les ventes si stock insuffisant
+📋 Rapport d'inventaire exportable en CSV (compatible Excel)
+⚡ Synchronisation Firebase en temps réel
+📭 Interface responsive et intuitive
+
+🛠️ Technologies utilisées
+
+TechnologieRôleReact JS 18Interface utilisateur — composants réactifsFirebase FirestoreBase de données NoSQL en temps réelTailwind CSS 3Style et mise en page responsiveReact Router DOM 6Navigation SPA sans rechargementVite 5Outil de build et serveur de développement
+
+🚀 Accès à l'application
+
+👉 smartpharma237.netlify.app
+
+⚙️ Installation locale
+
+Prérequis
+
+Node.js v18+
+npm v9+
+Compte Firebase (gratuit)
+
+Étapes
+
+bash# 1. Cloner le projet
+git clone https://github.com/gattdaniel/smartpharma237.git
+cd smartpharma237
+
+# 2. Installer les dépendances
+
+npm install
+
+# 3. Configurer Firebase (voir section ci-dessous)
+
+# 4. Lancer l'application
+
+npm run dev
+
+# 5. Ouvrir dans le navigateur
+
+# http://localhost:5173
+
+🔥 Configuration Firebase
+
+Ouvrir src/firebase.js et remplacer par votre configuration :
+
+javascriptconst firebaseConfig = {
+apiKey: "VOTRE_API_KEY",
+authDomain: "votre-projet.firebaseapp.com",
+projectId: "votre-projet",
+storageBucket: "votre-projet.appspot.com",
+messagingSenderId: "VOTRE_ID",
+appId: "VOTRE_APP_ID"
+};
+
+Règles Firestore
+
+Dans Console Firebase → Firestore → Règles :
+
+javascriptrules_version = '2';
+service cloud.firestore {
+match /databases/{database}/documents {
+match /medicaments/{id} {
+allow read, write: if true;
+}
+match /ventes/{id} {
+allow read, write: if true;
+}
+}
+}
+
+📁 Structure du projet
+
+smartpharma237/
+├── src/
+│ ├── firebase.js ← Configuration Firebase
+│ ├── App.jsx ← Routage principal
+│ ├── index.css ← Tailwind CSS
+│ ├── main.jsx ← Point d'entrée
+│ ├── components/
+│ │ └── Navbar.jsx ← Barre de navigation
+│ └── pages/
+│ ├── Medicaments.jsx ← Gestion des médicaments
+│ ├── Ventes.jsx ← Enregistrement des ventes
+│ ├── Alertes.jsx ← Alertes stock et expiration
+│ └── Inventaire.jsx ← Rapport et export CSV
+├── screenshots/ ← Captures d'écran
+├── tailwind.config.js
+├── vite.config.js
+├── package.json
+└── README.md
+
+🧪 Tests effectués
+
+FonctionnalitéStatutAjout médicament + affichage temps réel✅Alerte rupture de stock (quantité < 5)✅Alerte expiration (moins de 30 jours)✅Enregistrement vente✅Mise à jour stock automatique✅Blocage si stock insuffisant✅Export CSV inventaire✅Navigation SPA fluide✅
+
+👨‍💻 Auteur
+
+TAMDIENG TCHABDA GUY ALAIN
+Matricule : 22I00690
+ENSPD — Université de Douala
+Département GIT — Niveau 3 Génie Logiciel
+Année Académique 2025–2026
+
+📄 Licence
+
+Projet académique — ENSPD Douala 2025–2026
